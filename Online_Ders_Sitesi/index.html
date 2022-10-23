@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Js Proje</title>
+</head>
+
+<body onload="startTime()">
+    
+    <div class="main">
+        <div class="leftcontainer">
+            <ul class="box">
+                <li id="kutu1"> 1.ders <span id="text-right"> 08:00 - 08:40 </span> </li>
+                <li id="kutu2"> Tenefüs <span id="text-right"> 08:40 - 08:50 </span> </li>
+                <li id="kutu3"> 2.ders <span id="text-right"> 08:50 - 09:30 </span></li>
+                <li id="kutu4"> Tenefüs <span id="text-right"> 09:30 - 09:40 </span> </li>
+                <li id="kutu5"> 3.ders <span id="text-right">09:40 - 10:20</span></li>
+                <li id="kutu6"> Tenefüs <span id="text-right"> 10:20 - 10:30</span></li>
+                <li id="kutu7"> 4.ders <span id="text-right">10:30 - 11:10 </span></li>
+                <li id="kutu8"> Tenefüs <span id="text-right"> 11:10 - 11:20 </span> </li>
+                <li id="kutu9"> 5.ders <span id="text-right"> 11:20 - 12:00 </span> </li>
+                <li id="kutu10"> Tenefüs <span id="text-right">12:00 - 12:10 </span></li>
+                <li id="kutu11"> 6.ders <span id="text-right"> 12:10 - 12:50</span> </li>
+                <li id="kutu12"> Öğle Arası <span id="text-right"> 12:50 - 13:30 </span></li>
+                <li id="kutu13"> 7.ders <span id="text-right"> 13:30 - 14:10</span> </li>
+                <li id="kutu14"> Tenefüs <span id="text-right"> 14:10 - 14:15 </span> </li>
+                <li id="kutu15"> 8.ders <span id="text-right">14:15 - 14:55</span></li>
+                <li id="kutu16"> Tenefüs<span id="text-right"> 14:55 - 15:05</span> </li>
+                <li id="kutu17"> 9.ders <span id="text-right">15:05 - 15:45</span></li>
+                <li id="kutu18"> Tenefüs<span id="text-right">15:45 - 15:50 </span> </li>
+                <li id="kutu19"> 10.ders<span id="text-right">15:50 - 16:30</span> </li>
+                <li id="kutu20"> Tenefüs <span id="text-right">16:30 - 16:35 </span></li>
+                <li id="kutu21"> 11.ders <span id="text-right">16:35 - 17:15</span></li>
+                <li id="kutu22"> Tenefüs<span id="text-right"> 17:15 - 17:20 </span> </li>
+                <li id="kutu23"> 12.ders <span id="text-right">17:20 - 18:00</span></li>
+            </ul>
+            <script>
+
+            </script>
+
+
+        </div> <!-- left -->
+        <div class="rightcontainer">
+            <div class="logo"> </div>
+
+            <div class="basari">
+                <div class="middle">
+                    <div class="slider">
+                        <div class="slider-content">
+                            <div class="slider-item">
+                                <img src="images/1.jpg" width="1440" height="648" alt="Oguzhan Tas" title="Oguzhan Tas">
+
+                            </div>
+                            <div class="slider-item">
+                                <img src="images/2.jpg" width="1440" height="648" alt="Tolgahan Şişman"
+                                    title="Tolgahan Şişman">
+
+                            </div>
+                            <div class="slider-item">
+                                <img src="images/k.jpg" width="1440" height="648" alt="Ali Murat Tava"
+                                    title="Ali Murat Tava ">
+                            </div>
+                            <div class="slider-item">
+                                <img src="images/4.jpg" width="1440" height="648" alt="Kaan ince" title="Kaan ince">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="duyuru">
+                <div class="duyuruyazi">
+                    <marquee direction=right">Dolar <span style="color: green;"> 8. </span> Euro <span
+                            style="color: red;"> 10.50 </span> En Başarılı dört insan </marquee>
+                </div>
+            </div>
+            <div class="tarih">
+                <script>
+                    function startTime() {
+                        var today = new Date();
+                        var h = today.getHours();
+                        var m = today.getMinutes();
+                        var s = today.getSeconds();
+                        h = checkTime(h);
+                        m = checkTime(m);
+                        s = checkTime(s);
+
+                        var t = setTimeout(startTime, 1000);
+                    }
+                    function checkTime(i) {
+                        if (i < 10) { i = "0" + i };
+                        return i;
+                    }
+                </script>
+                <div class="suankisaat">
+                    <div id="txt"></div>
+                </div> <!-- suanki saat-->
+                <div class="kalanzaman">
+
+                    <div id="ten-countdown"></div>
+                    <script src="app2.js"></script>
+
+                </div> <!-- kalan zaman-->
+            </div> <!-- tarih-->
+
+        </div><!-- right -->
+
+    </div>
+    <!--main -->
+
+</body>
+
+</html>
